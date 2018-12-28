@@ -1,0 +1,12 @@
+#!/bin/bash
+if [ ! -e ~/.gitconfig ] ; then
+   ln -s ~/lzh/git_conf/gitconfig ~/.gitconfig
+fi
+
+if [ ! -e ~/lzh/.gitignore ] ; then
+   ln -s ~/lzh/git_conf/gitignore ~/lzh/.gitignore
+fi
+
+
+git config --global push.default matching
+#git config --global credential.helper store 
